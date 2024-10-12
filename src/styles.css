@@ -1,0 +1,19 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+    font-size: 16px;
+
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.img-logo {
+    height: 75px;
+    width: 200px;
+}

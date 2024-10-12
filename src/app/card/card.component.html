@@ -1,0 +1,49 @@
+<form class="search-form" (ngSubmit)="filterCards()">
+    <input
+      class="input-text"
+      type="text"
+      placeholder="Enter your favorite Pokemon"
+      [(ngModel)]="searchInput"
+      name="searchInput" required
+    />
+    <button  class="search-btn" type="submit">Search</button>
+  </form>
+
+
+  @if (isLoading) {
+
+      <div class="loading-center">
+        
+        
+            <h1 class="loading">Something awesome is Loading...</h1>
+        
+    </div>
+  } @else {
+
+      <div class="section-card-center">
+      
+          
+              
+          
+          
+             
+          
+          
+      
+          <section class="section-card">
+              
+                 
+              
+              <div class="center" *ngFor="let card of filteredData()">
+                  <h3 class="pokemon-name">{{ card.name }}</h3>
+                  <img [src]="card.images.small" alt="{{ card.name }} Small Image">
+                  
+              </div>
+          
+          </section>
+      </div>
+      
+      
+
+  }    
+  
